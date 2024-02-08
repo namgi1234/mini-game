@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'ArcadeClassic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('ArcadeClassic'),url('ARCADECLASSIC.woff')  format('woff');
+}   
+
+@media( orientation: portrait ){
+  html {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+  }
+}
+
+*{
+  font-family: 'ArcadeClassic', sans-serif;
+} 
+ 
+.controlls{
+  color: wheat;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  display: inline-block;
+}
+
+body{
+  background: black;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#container{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  display: inline-block;
+}
+canvas{
+  background: black;
+  border: 1px solid  wheat;
+}
