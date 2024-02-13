@@ -4,8 +4,6 @@ https://codepen.io/EduardoLopes/pen/IJnAr/license
 
 **/
 
-//dirty code made in less the 24 working hours
-
 import {getCookie, existingValue} from './cookie.js';
 
 existingValue("jump")
