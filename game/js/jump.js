@@ -396,7 +396,6 @@ document.querySelector('.controlls').style.display = 'block';
 document.addEventListener("touchstart", () => {
   if (InfiniteRunner.player.velocityY >=0 && InfiniteRunner.player.velocityY < 5) {
     InfiniteRunner.player.velocityY = InfiniteRunner.player.jumpSize - 7;
-    console.log('tab detected');
     InfiniteRunner.jumpCount++;
 
     if (InfiniteRunner.jumpCount > InfiniteRunner.jumpCountRecord) {
