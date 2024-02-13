@@ -193,4 +193,4 @@ document.addEventListener('touchend',()=>{
     accelerate(-0.2)
 })
 
-document.onload(startGame())
+startGame()
