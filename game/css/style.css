@@ -18,13 +18,6 @@
 }
 
 body {
-  /* transform: rotate(-90deg);
-  transform-origin: top left;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100vh;
-  height: 100vw; */
   background-color: #111111;
   color: ghostwhite;
   font-family: 'ArcadeClassic', sans-serif;
@@ -78,5 +71,5 @@ body {
 }
 
 .name:hover {
-  color: blue; /* 원하는 호버 색상으로 변경하세요 */
+  color: blue;
 }
