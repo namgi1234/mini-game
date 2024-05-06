@@ -1,6 +1,6 @@
 # mini-game
 ### Demo
-https://mini-game-io.netlify.com
+https://mini-game-io.netlify.app
 ## Introcuction
 It has two types of game that very simple.
 First one is flappy box. It is clone of "flappy bird".
