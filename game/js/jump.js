@@ -13,9 +13,17 @@ function randomChoice(array) {
     return array[Math.round(random(0, array.length - 1))];
 }
 
-var InfiniteRunner = Sketch.create(
-    {fullscreen: false, width: 640, height: 500, container: document.getElementById('container')}
-);
+try {
+    var InfiniteRunner = Sketch.create(
+        {fullscreen: false, width: 640, height: 500, container: document.getElementById('container')}
+    );
+} catch (error) {
+    alert(
+        "The game failed to load." +
+        " Please return to the main screen and run the game again."
+    )
+    window.location.reload();
+}
 
 /*******************/
 /*****VECTOR2*******/
@@ -301,7 +309,9 @@ InfiniteRunner.setup = function () {
 
 InfiniteRunner.update = function () {
 
-    this.player.update();
+    this
+        .player
+        .update();
 
     switch (this.jumpCount) {
         case 10:
@@ -329,10 +339,7 @@ InfiniteRunner.update = function () {
                 .platformManager
                 .platforms[i];
             if (this.player.y < this.platformManager.platforms[i].y) {
-                this.player.y = this
-                    .platformManager
-                    .platforms[i]
-                    .y;
+                this.player.y = this.platformManager.platforms[i].y;
                 this.player.velocityY = 0;
             }
 
@@ -357,10 +364,6 @@ InfiniteRunner.update = function () {
                 };
                 this.player.velocityY = -10 + -(this.aceleration * 4);
                 this.player.velocityX = -20 + -(this.aceleration * 4);
-                // this.jumpCount = 0; this.aceleration = 0; this.acelerationTweening = 0;
-                // this.scoreColor = '#181818'; this.platformManager.maxDistanceBetween = 350;
-                // this.platformManager.updateWhenLose();
-
             } else {
 
                 if (this.keys.S || this.keys.ENTER || this.keys.W || this.dragging) {
@@ -425,11 +428,9 @@ InfiniteRunner.draw = function () {
             this.width - (150 + (this.aceleration * 4)),
             85
         );
-        
+
     }
-    this.fillText(
-        'Jump: TAB or ENTER (Hold to jump higher)',170,200
-    );
+    this.fillText('Jump: TAB or ENTER (Hold to jump higher)', 170, 200);
 };
 
 InfiniteRunner.resize = function () {};
@@ -444,8 +445,5 @@ document.addEventListener("touchstart", () => {
         }
     }
 });
-
-
-
 
 /** https://codepen.io/EduardoLopes/pen/IJnAr/license **/
