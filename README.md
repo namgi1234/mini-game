@@ -10,4 +10,7 @@ I created a game console using Raspberry Pi using this code.
 
 ![image](https://github.com/user-attachments/assets/b0ff4f35-39a6-49b6-8b9c-6f893c6740bb)
 
-Game results are stored in cookies
+
+On game consoles, you can select games and play them with the arcade buttons.
+In the web version, you can play the game by clicking on the screen.
+And the game results are stored in cookies.
