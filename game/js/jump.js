@@ -407,7 +407,6 @@ InfiniteRunner.draw = function () {
             33 - (this.aceleration * 4)
         );
         this.fillStyle = this.scoreColor;
-        this.font = (12 + (this.aceleration * 3)) + 'pt Arial';
         this.fillText(
             'JUMPS: ' + this.jumpCount,
             this.width - (150 + (this.aceleration * 4)),
@@ -420,7 +419,6 @@ InfiniteRunner.draw = function () {
             70 - (this.aceleration * 4)
         );
         this.fillStyle = this.scoreColor;
-        this.font = (12 + (this.aceleration * 3)) + 'pt Arial';
         this.fillText(
             'JUMPS: ' + this.jumpCount,
             this.width - (150 + (this.aceleration * 4)),
