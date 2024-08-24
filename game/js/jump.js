@@ -335,9 +335,7 @@ InfiniteRunner.update = function () {
 
     for (i = 0; i < this.platformManager.platforms.length; i++) {
         if (this.player.intersects(this.platformManager.platforms[i])) {
-            this.collidedPlatform = this
-                .platformManager
-                .platforms[i];
+            this.collidedPlatform = this.platformManager.platforms[i];
             if (this.player.y < this.platformManager.platforms[i].y) {
                 this.player.y = this.platformManager.platforms[i].y;
                 this.player.velocityY = 0;
