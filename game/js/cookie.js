@@ -13,6 +13,6 @@ export function existingValue (name) {
     var Value = getCookie(name);
     if (!Value) {
         console.log(document.cookie)
-        document.cookie = name + " = 0;"
+        document.cookie = name + " = 0;  max-age=31556926"
       }
 }
